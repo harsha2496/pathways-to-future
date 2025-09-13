@@ -56,7 +56,7 @@ export const Layout = () => {
               variant="ghost"
               size="sm"
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="lg:hidden"
+              className="hover:bg-muted transition-colors"
             >
               <Menu className="h-5 w-5" />
             </Button>
@@ -116,10 +116,10 @@ export const Layout = () => {
       <div className="flex">
         {/* Sidebar */}
         <aside className={cn(
-          "fixed inset-y-0 left-0 z-40 w-64 bg-muted/30 border-r border-border transform transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:inset-0",
+          "fixed inset-y-0 left-0 z-40 w-64 bg-card border-r border-border transform transition-all duration-300 ease-in-out shadow-lg",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}>
-          <div className="flex items-center justify-between p-4 lg:hidden">
+          <div className="flex items-center justify-between p-4">
             <h2 className="text-lg font-semibold">Menu</h2>
             <Button
               variant="ghost"
@@ -159,16 +159,16 @@ export const Layout = () => {
           </nav>
         </aside>
 
-        {/* Overlay for mobile */}
+        {/* Overlay */}
         {sidebarOpen && (
           <div
-            className="fixed inset-0 z-30 bg-black/50 lg:hidden"
+            className="fixed inset-0 z-30 bg-black/50 animate-fade-in"
             onClick={() => setSidebarOpen(false)}
           />
         )}
 
         {/* Main Content */}
-        <main className="flex-1 lg:ml-0">
+        <main className="flex-1">
           <Outlet />
         </main>
       </div>
