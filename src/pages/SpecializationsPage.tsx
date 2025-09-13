@@ -279,7 +279,12 @@ export default function SpecializationsPage() {
 
                 {/* Action Buttons */}
                 <div className="flex gap-4">
-                  <Button className="flex-1 bg-primary hover:bg-primary-hover">
+                  <Button 
+                    className="flex-1 bg-primary hover:bg-primary-hover"
+                    onClick={() => navigate(`/top-colleges/${streamId}/${courseId}/${selectedSpec.id}`, {
+                      state: { specialization: selectedSpec.id }
+                    })}
+                  >
                     <GraduationCap className="h-4 w-4 mr-2" />
                     Top Colleges
                   </Button>

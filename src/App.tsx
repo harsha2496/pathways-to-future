@@ -7,6 +7,7 @@ import { Layout } from "./components/Layout";
 import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
 import SpecializationsPage from "./pages/SpecializationsPage";
+import TopCollegesPage from "./pages/TopCollegesPage";
 import AIChatPage from "./pages/AIChatPage";
 import NotFound from "./pages/NotFound";
 
@@ -23,6 +24,8 @@ const App = () => (
             <Route index element={<HomePage />} />
             <Route path="courses/:streamId" element={<CoursesPage />} />
             <Route path="specializations/:streamId/:courseId" element={<SpecializationsPage />} />
+            <Route path="top-colleges/:streamId/:courseId/:specializationId" element={<TopCollegesPage />} />
+            <Route path="top-colleges/:streamId/:courseId" element={<TopCollegesPage />} />
             <Route path="ai-chat" element={<AIChatPage />} />
             <Route path="suggestion-box" element={<div className="p-8 text-center">Suggestion Box - Coming Soon!</div>} />
             <Route path="colleges" element={<div className="p-8 text-center">Colleges - Coming Soon!</div>} />
