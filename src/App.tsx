@@ -8,6 +8,8 @@ import HomePage from "./pages/HomePage";
 import CoursesPage from "./pages/CoursesPage";
 import SpecializationsPage from "./pages/SpecializationsPage";
 import TopCollegesPage from "./pages/TopCollegesPage";
+import CollegesPage from "./pages/CollegesPage";
+import CollegeDetailsPage from "./pages/CollegeDetailsPage";
 import AIChatPage from "./pages/AIChatPage";
 import NotFound from "./pages/NotFound";
 
@@ -28,7 +30,8 @@ const App = () => (
             <Route path="top-colleges/:streamId/:courseId" element={<TopCollegesPage />} />
             <Route path="ai-chat" element={<AIChatPage />} />
             <Route path="suggestion-box" element={<div className="p-8 text-center">Suggestion Box - Coming Soon!</div>} />
-            <Route path="colleges" element={<div className="p-8 text-center">Colleges - Coming Soon!</div>} />
+            <Route path="colleges" element={<CollegesPage />} />
+            <Route path="college-details/:collegeId" element={<CollegeDetailsPage />} />
             <Route path="ai-suggestions" element={<div className="p-8 text-center">AI Suggestions - Coming Soon!</div>} />
             <Route path="ask-question" element={<div className="p-8 text-center">Ask Question - Coming Soon!</div>} />
             <Route path="top-careers" element={<div className="p-8 text-center">Top Careers - Coming Soon!</div>} />
