@@ -64,7 +64,7 @@ export default function HomePage() {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Discover Your Perfect Career Path
+            What to do next after 12th?
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Explore academic streams, courses, and specializations to find the career that matches your interests and goals.
